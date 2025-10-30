@@ -6,7 +6,7 @@ from langchain.prompts import PromptTemplate
 
 from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled
 
-video_id = "IyxSqeFrlp0"  # only the ID, not full URL
+video_id = "Video-ID"  # only the ID, not full URL
 
 try:
     # Fetch transcript directly (returns FetchedTranscriptSnippet objects)
@@ -23,7 +23,7 @@ chunks = splitter.create_documents([text])
 
 embedding = NVIDIAEmbeddings(
   model="nvidia/nv-embedqa-e5-v5", 
-  api_key="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", 
+  api_key=YOUR-API-KEY, 
   truncate="NONE", 
   )
 
@@ -97,7 +97,7 @@ from langchain_nvidia_ai_endpoints import ChatNVIDIA
 
 llm =  ChatNVIDIA(
   model="mistralai/mistral-7b-instruct-v0.3",
-  api_key="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", 
+ api_key=YOUR-API-KEY, 
   temperature=0.2,
   top_p=0.7,
   max_completion_tokens=1024,
