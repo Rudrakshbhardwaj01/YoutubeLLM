@@ -97,7 +97,7 @@ from langchain_nvidia_ai_endpoints import ChatNVIDIA
 
 llm =  ChatNVIDIA(
   model="mistralai/mistral-7b-instruct-v0.3",
- api_key=YOUR-API-KEY, 
+  api_key=YOUR-API-KEY, 
   temperature=0.2,
   top_p=0.7,
   max_completion_tokens=1024,
